@@ -1,0 +1,547 @@
+@font-face {
+  font-family: "Lato";
+  src: url("assets/fonts/Lato-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("assets/fonts/Lato-Black.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("assets/fonts/OpenSans-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --navy: #003758;
+  --navy-deep: #002e4d;
+  --blue: #176bad;
+  --gold: #e9c400;
+  --ink: #343434;
+  --muted: #6b7280;
+  --line: #ececec;
+  --paper: #ffffff;
+  --soft: #f5f6f7;
+  --max-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.55;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 999;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  color: #fff;
+  background: var(--navy);
+  transform: translateY(-180%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.container {
+  width: min(calc(100% - 2.5rem), var(--max-width));
+  margin-inline: auto;
+}
+
+.topbar {
+  min-height: 36px;
+  background: #f0f0f0;
+  color: var(--navy);
+  font-family: "Lato", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.topbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: inherit;
+  gap: 0.6rem;
+}
+
+.topbar a {
+  color: inherit;
+}
+
+.site-header {
+  position: relative;
+  z-index: 20;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.header-row {
+  display: grid;
+  grid-template-columns: 300px 1fr auto;
+  align-items: center;
+  min-height: 100px;
+  gap: 1.5rem;
+}
+
+.brand img {
+  width: 285px;
+}
+
+.main-nav {
+  justify-self: end;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: clamp(1rem, 2.3vw, 2.35rem);
+}
+
+.nav-list a {
+  display: inline-block;
+  padding: 0.7rem 0;
+  color: var(--navy);
+  font-family: "Lato", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.nav-list a[aria-current="page"] {
+  box-shadow: inset 0 -3px var(--gold);
+}
+
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--navy);
+  background: #fff;
+  font-size: 1.45rem;
+  cursor: pointer;
+}
+
+main {
+  min-height: 50vh;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.75fr) minmax(420px, 1.25fr);
+  gap: clamp(3rem, 7vw, 7rem);
+  padding-block: 3.2rem 4rem;
+}
+
+.hero h1,
+.article h1 {
+  margin: 0;
+  color: var(--navy);
+  font-family: "Lato", sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.1rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+}
+
+.hero-intro {
+  margin: 2.75rem 0 2rem;
+  padding-block: 1.65rem;
+  border-block: 1px solid var(--line);
+}
+
+.hero-intro p {
+  margin: 0;
+}
+
+.hero-image {
+  align-self: start;
+  width: 100%;
+  aspect-ratio: 1.5 / 1;
+  object-fit: cover;
+}
+
+.schedule-block {
+  margin-block: 0 3rem;
+}
+
+.schedule-block h2,
+.schedule-block h3,
+.article h2 {
+  margin: 0 0 0.2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.schedule-block h2,
+.article h2 {
+  font-size: 1.55rem;
+  text-transform: uppercase;
+}
+
+.schedule-block h3 {
+  font-size: 1.25rem;
+}
+
+.schedule-block p {
+  margin: 0.1rem 0;
+}
+
+.home-lower {
+  padding-top: 1rem;
+}
+
+.feature-banner {
+  position: relative;
+  display: grid;
+  min-height: 245px;
+  place-items: center;
+  color: #fff;
+  background: var(--gold) url("assets/fondo-horarios.png") center / cover no-repeat;
+  text-align: center;
+  isolation: isolate;
+}
+
+.feature-banner::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  background: rgba(221, 190, 0, 0.82);
+}
+
+.feature-banner h2 {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+}
+
+.feature-banner p {
+  margin: 0.5rem 0 1.75rem;
+  font-size: 1.05rem;
+}
+
+.button {
+  display: inline-block;
+  min-width: 168px;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  color: inherit;
+  font-family: "Lato", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.button:hover,
+.button:focus-visible {
+  color: var(--navy);
+  background: #fff;
+  text-decoration: none;
+}
+
+.video-section {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 1.75rem;
+  padding-block: 5.5rem 6rem;
+}
+
+.video-card {
+  display: grid;
+  min-height: 310px;
+  place-content: center;
+  padding: 2.5rem;
+  background: var(--soft);
+  text-align: center;
+}
+
+.video-card h2 {
+  margin: 0;
+  color: #333;
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.video-card p {
+  margin: 1rem 0 0;
+}
+
+.video-link {
+  align-self: start;
+  padding: 1.15rem 1.5rem;
+  color: #343434;
+  background: var(--soft);
+  font-family: "Lato", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.article {
+  width: min(calc(100% - 2.5rem), 920px);
+  margin-inline: auto;
+  padding-block: 4.5rem 6rem;
+}
+
+.article-header {
+  margin-bottom: 2.8rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.article-date {
+  margin: 0.8rem 0 0;
+  color: var(--muted);
+}
+
+.article-section {
+  margin-top: 2.5rem;
+}
+
+.article p,
+.article li {
+  font-size: 1.02rem;
+}
+
+.article .contact-card {
+  margin-top: 2.8rem;
+  padding: 1.5rem;
+  border-left: 5px solid var(--gold);
+  background: var(--soft);
+}
+
+.contact-strip {
+  color: #fff;
+  background: var(--navy-deep);
+}
+
+.contact-strip .container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1.35fr;
+  align-items: center;
+  min-height: 118px;
+  gap: 2rem;
+}
+
+.contact-strip strong {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-strip a {
+  color: #fff;
+}
+
+.contact-item {
+  margin: 0.25rem 0;
+}
+
+.footer-main {
+  padding-block: 3rem;
+  color: #fff;
+  background: var(--blue);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1.25fr;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.footer-brand img {
+  width: 250px;
+}
+
+.footer-main h2 {
+  margin: 0 0 1rem;
+  font-family: "Lato", sans-serif;
+  font-size: 1.1rem;
+}
+
+.footer-main ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-main li {
+  margin: 0.42rem 0;
+}
+
+.footer-main a {
+  color: #fff;
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.footer-contact p {
+  margin: 0.5rem 0;
+  font-size: 0.82rem;
+}
+
+.footer-bottom {
+  padding: 1rem;
+  color: #fff;
+  background: var(--navy-deep);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1040px) {
+  .header-row {
+    grid-template-columns: 260px 1fr auto;
+  }
+
+  .brand img {
+    width: 245px;
+  }
+
+  .menu-toggle {
+    display: inline-grid;
+    place-items: center;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    padding: 1rem 1.25rem;
+    border-top: 1px solid var(--line);
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 40, 70, 0.12);
+  }
+
+  .main-nav.is-open {
+    display: block;
+  }
+
+  .nav-list {
+    display: grid;
+    gap: 0;
+  }
+
+  .nav-list a {
+    display: block;
+    padding: 0.9rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr 1.25fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    display: none;
+  }
+
+  .container,
+  .article {
+    width: min(calc(100% - 2rem), var(--max-width));
+  }
+
+  .header-row {
+    grid-template-columns: 1fr auto;
+    min-height: 82px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding-block: 2.5rem 3rem;
+  }
+
+  .hero-image {
+    grid-row: 1;
+  }
+
+  .hero-intro {
+    margin-top: 1.8rem;
+  }
+
+  .feature-banner {
+    min-height: 310px;
+    padding: 2rem 1rem;
+    background-image: url("assets/fondo-horarios-movil.png");
+  }
+
+  .video-section,
+  .contact-strip .container,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-section {
+    padding-block: 3rem;
+  }
+
+  .contact-strip .container {
+    padding-block: 2rem;
+    gap: 0.75rem;
+  }
+
+  .footer-grid {
+    gap: 2.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
