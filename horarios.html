@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Horarios de las celebraciones y atención del despacho de la Parroquia Nuestra Señora de Las Aguas.">
+    <meta name="description" content="Horarios de celebraciones, confesiones, Hora Santa y atención del despacho parroquial.">
     <title>Horarios | Parroquia Nuestra Señora de Las Aguas</title>
     <link rel="icon" href="assets/favicon.png">
     <link rel="stylesheet" href="styles.css">
@@ -11,43 +11,36 @@
   </head>
   <body data-page="horarios">
     <div id="site-header"></div>
-
     <main id="main-content">
-      <article class="article">
-        <header class="article-header">
-          <h1>Horarios de las celebraciones y atención de despacho</h1>
-        </header>
-
-        <section class="schedule-block">
-          <h2>Horarios misas</h2>
-          <p><strong>Lunes:</strong> 6 pm</p>
-          <p><strong>De martes a viernes:</strong> 7 am · 6 pm</p>
-          <p><strong>Sábado:</strong> 6 pm</p>
-          <p><strong>Domingo:</strong> 8 am · 10 am · 12 m · 6 pm</p>
-        </section>
-
-        <section class="schedule-block">
-          <h2>Confesiones</h2>
-          <p>Antes y después de Misa.</p>
-          <p>Durante las Misas cuando hay un sacerdote disponible.</p>
-          <p>Siempre tocando el timbre de la casa cural.</p>
-        </section>
-
-        <section class="schedule-block">
-          <h2>Hora Santa</h2>
-          <p>Todos los <strong>jueves</strong> de 5 pm a 6 pm.</p>
-        </section>
-
-        <section class="schedule-block">
-          <h2>Despacho parroquial</h2>
-          <h3>Horarios</h3>
-          <p>De <strong>lunes a viernes:</strong></p>
-          <p>9:00 am – 12:30 pm</p>
-          <p>1:30 pm – 5:00 pm</p>
-        </section>
-      </article>
+      <header class="inner-hero">
+        <div class="container">
+          <span class="eyebrow">Celebración y encuentro</span>
+          <h1>Horarios de la parroquia</h1>
+          <p>Horarios de las celebraciones, la oración y la atención del despacho parroquial.</p>
+        </div>
+      </header>
+      <section class="content-section" aria-label="Horarios detallados">
+        <div class="container content-grid">
+          <article class="info-card accent">
+            <h2>Horarios de misas</h2>
+            <div data-schedule="massesSchedulePage"></div>
+            <p class="notice">Por confirmar: la portada original también incluía una misa a las 12:30 p. m. de martes a viernes.</p>
+          </article>
+          <article class="info-card">
+            <h2>Confesiones</h2>
+            <div data-schedule="confessionsSchedulePage"></div>
+          </article>
+          <article class="info-card">
+            <h2>Hora Santa</h2>
+            <p data-schedule="holyHour"></p>
+          </article>
+          <article class="info-card">
+            <h2>Despacho parroquial</h2>
+            <div data-schedule="office"></div>
+          </article>
+        </div>
+      </section>
     </main>
-
     <div id="site-footer"></div>
   </body>
 </html>

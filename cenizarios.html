@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Información y horarios de los cenizarios de la Parroquia Nuestra Señora de Las Aguas.">
+    <meta name="description" content="Información, disponibilidad y horarios de visita de los cenizarios parroquiales.">
     <title>Cenizarios | Parroquia Nuestra Señora de Las Aguas</title>
     <link rel="icon" href="assets/favicon.png">
     <link rel="stylesheet" href="styles.css">
@@ -11,34 +11,36 @@
   </head>
   <body data-page="cenizarios">
     <div id="site-header"></div>
-
     <main id="main-content">
-      <article class="article">
-        <header class="article-header">
+      <header class="inner-hero">
+        <div class="container">
+          <span class="eyebrow">Memoria y esperanza</span>
           <h1>Cenizarios</h1>
-          <p class="article-date">22 de julio de 2022</p>
-        </header>
-
-        <section class="article-section">
-          <h2>Disponibilidad en la cripta parroquial</h2>
-          <p><strong>Contrato a perpetuidad.</strong></p>
-        </section>
-
-        <section class="article-section">
-          <h2>Horario de visitas a los difuntos</h2>
-          <p><strong>De martes a viernes:</strong> en horario de despacho.</p>
-          <p><strong>Sábado:</strong> de 2 pm a 6 pm.</p>
-          <p><strong>Domingo:</strong> de 8 am a 1 pm.</p>
-        </section>
-
-        <aside class="contact-card">
-          <strong>Información en el despacho parroquial</strong>
-          <p>Teléfono: <a href="tel:+576013412985">(601) 341 2985</a></p>
-          <p>Email: <a href="mailto:plasaguas@arquibogota.org.co">plasaguas@arquibogota.org.co</a></p>
-        </aside>
-      </article>
+          <p>Un lugar de recogimiento para honrar la memoria de quienes han partido.</p>
+        </div>
+      </header>
+      <section class="content-section paper">
+        <div class="container detail-layout">
+          <article class="info-card">
+            <p class="date-label">Información publicada el 22 de julio de 2022</p>
+            <h2>Cripta parroquial</h2>
+            <p>Hay disponibilidad en la cripta parroquial mediante <strong>contrato a perpetuidad</strong>.</p>
+            <h3>Horario de visitas a los difuntos</h3>
+            <dl class="schedule-list">
+              <div><dt>Martes a viernes</dt><dd>En horario de despacho.</dd></div>
+              <div><dt>Sábado</dt><dd>De 2:00 p. m. a 6:00 p. m.</dd></div>
+              <div><dt>Domingo</dt><dd>De 8:00 a. m. a 1:00 p. m.</dd></div>
+            </dl>
+          </article>
+          <aside class="sidebar-card" aria-labelledby="cenizario-contact">
+            <h2 id="cenizario-contact">Información</h2>
+            <p>Consulte disponibilidad y condiciones directamente en el despacho parroquial.</p>
+            <p><a href="tel:+576013412985">(601) 341 2985</a></p>
+            <p><a href="mailto:plasaguas@arquibogota.org.co">plasaguas@arquibogota.org.co</a></p>
+          </aside>
+        </div>
+      </section>
     </main>
-
     <div id="site-footer"></div>
   </body>
 </html>
