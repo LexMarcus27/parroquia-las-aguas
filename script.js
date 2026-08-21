@@ -81,8 +81,7 @@ document.querySelector("#site-header").innerHTML = `
   <header class="site-header">
     <div class="container header-row">
       <a class="brand" href="index.html" aria-label="${parish.name}: ir al inicio">
-        <span class="brand-mark" aria-hidden="true">✦</span>
-        <span><strong>Las Aguas</strong><small>Parroquia Nuestra Señora</small></span>
+        <img class="brand-logo brand-logo-header" src="assets/logo-parroquia-horizontal.png" alt="${parish.name}, Bogotá">
       </a>
       <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
         <ul class="nav-list">
@@ -108,7 +107,7 @@ document.querySelector("#site-footer").innerHTML = `
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-intro">
-        <a class="brand brand-footer" href="index.html"><span class="brand-mark" aria-hidden="true">✦</span><span><strong>Las Aguas</strong><small>Parroquia Nuestra Señora</small></span></a>
+        <a class="brand brand-footer" href="index.html" aria-label="${parish.name}: ir al inicio"><img class="brand-logo" src="assets/logo-parroquia-oficial.png" alt="${parish.name}, Bogotá"></a>
         <p>Una comunidad de fe en el corazón histórico de Bogotá.</p>
         <img src="assets/logo-arquidiocesis-footer.png" alt="Arquidiócesis de Bogotá">
       </div>
