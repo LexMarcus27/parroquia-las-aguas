@@ -28,7 +28,9 @@ Luego visite `http://localhost:8000/`. Las páginas disponibles son:
 │   ├── iglesia-las-aguas.jpeg
 │   ├── fondo-horarios.png
 │   ├── fondo-horarios-movil.png
-│   └── logos y favicon
+│   ├── logo-parroquia-oficial.png
+│   ├── logo-parroquia-horizontal.png
+│   └── otros logos y favicon
 ├── index.html
 ├── horarios.html
 ├── sacramentos.html
@@ -62,7 +64,7 @@ Reemplace fecha, título, descripción, hora y lugar. Mantenga una fecha válida
 
 ### Imágenes
 
-Los recursos locales están en `assets/`. La imagen principal se referencia como `assets/iglesia-las-aguas.jpeg` en el hero, la bienvenida, el video y los encabezados interiores. Puede sustituirse conservando el nombre, o actualizar las rutas correspondientes en HTML y CSS. Evite depender de imágenes remotas.
+Los recursos locales están en `assets/`. La imagen principal se referencia como `assets/iglesia-las-aguas.jpeg` en el hero, la bienvenida, el video y los encabezados interiores. El encabezado usa la variante oficial `assets/logo-parroquia-horizontal.png` y el footer la variante compacta `assets/logo-parroquia-oficial.png`. Puede sustituir cualquiera conservando su nombre, o actualizar las rutas correspondientes en HTML, CSS o `script.js`. Evite depender de imágenes remotas.
 
 ### Colores, tipografía, espacios y sombras
 
